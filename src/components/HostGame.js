@@ -11,7 +11,6 @@ function HostGame(props) {
         .then(json => {
             if(json.bool) {
                 props.setServer(json.server);
-                alert(json.msg);
                 history.push('/game');
             }
         })

@@ -7,7 +7,7 @@ import Store from './redux/store';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/tictactoemultiplayer">
       <Provider store={Store}>
         <Route component={HomePage} path="/" exact/>
         <Route component={GamePage} path="/game" exact/>

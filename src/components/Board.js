@@ -3,7 +3,7 @@ import O from '../imgs/O.png';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import {connect} from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 let updateInterval;
 
@@ -11,6 +11,7 @@ function Board(props) {
     const [mainState, setMainState] = useState({});
     const [yourTurn, setYourTurn] = useState(false);
     const [serverFull, setServerFull] = useState(false);
+    const [win, setWin] = useState(false);
     const [currentTurn, setCurrentTurn] = useState(props.username);
 
     const history = useHistory();
@@ -22,9 +23,6 @@ function Board(props) {
                 if(json.bool) {
                     setMainState(json.game.state);
                     console.log(mainState);
-                }
-                else {
-                    alert('nope');
                 }
             })
             .catch(() => alert('Some error occured!'));
@@ -48,8 +46,7 @@ function Board(props) {
                 if(json.win) {
                     clearInterval(updateInterval);
                     updateInterval = undefined;
-                    alert(`${json.win} wins!`);
-                    history.push('/');
+                    setWin(json.win);
                 }
             })
             .catch(() => {
@@ -58,7 +55,7 @@ function Board(props) {
                 history.push('/');
                 alert('Some error occured!');
             });
-        }, 500);
+        }, 1000);
     });
     return (
         <div className="text-center">
@@ -80,7 +77,7 @@ function Board(props) {
                     <td className="_bl _bt" onClick={() => spotClicked('s9')} style={{backgroundImage: `url(${mainState.s9 == 'X' ? X : mainState.s9 == 'O' ? O : ''})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}></td>
                 </tr>
             </table>
-            {serverFull ? <p className={`${currentTurn == props.username ? 'font-weight-bold' : ''}`}>{`Turn: ${currentTurn == props.username ? 'Yours' : 'Other player'}`}</p> : ''}
+            {win ? <div><p className="font-weight-bold">{`${win} wins!`}</p><Link className="btn btn-primary" to="/">Go back</Link></div> : serverFull ? <p className={`${currentTurn == props.username ? 'font-weight-bold' : ''}`}>{`Turn: ${currentTurn == props.username ? 'Yours' : 'Other player'}`}</p> : ''}
         </div>
     )
 }
