@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/tictactoemultiplayer/static/css/main.d81ac280.chunk.css",
+    "main.js": "/tictactoemultiplayer/static/js/main.d2a6f7fa.chunk.js",
+    "main.js.map": "/tictactoemultiplayer/static/js/main.d2a6f7fa.chunk.js.map",
+    "runtime-main.js": "/tictactoemultiplayer/static/js/runtime-main.e1b782ab.js",
+    "runtime-main.js.map": "/tictactoemultiplayer/static/js/runtime-main.e1b782ab.js.map",
+    "static/css/2.150d169a.chunk.css": "/tictactoemultiplayer/static/css/2.150d169a.chunk.css",
+    "static/js/2.a7b185ab.chunk.js": "/tictactoemultiplayer/static/js/2.a7b185ab.chunk.js",
+    "static/js/2.a7b185ab.chunk.js.map": "/tictactoemultiplayer/static/js/2.a7b185ab.chunk.js.map",
+    "static/js/3.a22bb725.chunk.js": "/tictactoemultiplayer/static/js/3.a22bb725.chunk.js",
+    "static/js/3.a22bb725.chunk.js.map": "/tictactoemultiplayer/static/js/3.a22bb725.chunk.js.map",
+    "index.html": "/tictactoemultiplayer/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/tictactoemultiplayer/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.d81ac280.chunk.css.map": "/tictactoemultiplayer/static/css/main.d81ac280.chunk.css.map",
+    "static/js/2.a7b185ab.chunk.js.LICENSE.txt": "/tictactoemultiplayer/static/js/2.a7b185ab.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e1b782ab.js",
+    "static/css/2.150d169a.chunk.css",
+    "static/js/2.a7b185ab.chunk.js",
+    "static/css/main.d81ac280.chunk.css",
+    "static/js/main.d2a6f7fa.chunk.js"
+  ]
+}
