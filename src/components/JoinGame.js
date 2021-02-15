@@ -14,7 +14,6 @@ function JoinGame(props) {
         .then(json => {
             if(json.bool) {
                 props.setServer(json.server);
-                alert(json.msg);
                 history.push('/game');
             } else {
                 alert(json.msg);
