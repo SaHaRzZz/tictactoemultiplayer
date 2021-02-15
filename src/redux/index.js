@@ -1,1 +1,1 @@
-export {setOnline} from './online/actions';
+export {setOnline, setUsername, setServer} from './online/actions';

@@ -10,6 +10,8 @@ function HomePage(props) {
         <div className="text-center">
             {props.isOnline ? 
             <div>
+                <p>Hello <strong>{props.username}</strong></p>
+                <br/>
                 <JoinGame/>
                 <HostGame/>
             </div>
@@ -23,7 +25,8 @@ function HomePage(props) {
 
 const mapStateToProps = state => {
     return {
-        isOnline: state.online.isOnline
+        isOnline: state.online.isOnline,
+        username: state.online.username
     }
 }
 

@@ -1,0 +1,30 @@
+._br {
+    border-right: 1px solid black;
+}
+._bt {
+    border-top: 1px solid black;
+}
+._bl {
+    border-left: 1px solid black;
+}
+._bb {
+    border-bottom: 1px solid black;
+}
+._bx {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+._by {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+._bf {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+td {
+    width: 200px;
+    height: 200px;
+}

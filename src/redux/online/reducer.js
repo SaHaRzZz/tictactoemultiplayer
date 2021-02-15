@@ -1,7 +1,9 @@
-import {SET_ONLINE} from './types';
+import {SET_ONLINE, SET_USERNAME, SET_SERVER} from './types';
 
 const initialState = {
-    isOnline: false
+    isOnline: false,
+    username: '',
+    server: ''
 }
 
 const reducer = (state = initialState, action) => {
@@ -9,6 +11,14 @@ const reducer = (state = initialState, action) => {
         case SET_ONLINE: return {
             ...state,
             isOnline: action.type
+        }
+        case SET_USERNAME: return {
+            ...state,
+            username: action.payload
+        }
+        case SET_SERVER: return {
+            ...state,
+            server: action.payload
         }
         default: return state;
     }
