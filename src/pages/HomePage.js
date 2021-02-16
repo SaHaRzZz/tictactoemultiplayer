@@ -1,9 +1,10 @@
 import {connect} from 'react-redux';
+import {setOnline} from '../redux/';
 
 import JoinGame from '../components/JoinGame';
 import HostGame from '../components/HostGame';
 import Connect from '../components/Connect';
-import {setOnline} from '../redux/';
+import ServerList from '../components/ServerList';
 
 function HomePage(props) {
     return (
@@ -14,6 +15,7 @@ function HomePage(props) {
                 <br/>
                 <JoinGame/>
                 <HostGame/>
+                <ServerList/>
             </div>
             :
             <div>
